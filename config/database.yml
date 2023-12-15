@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV.fetch("DBHOST") { "localhost" } %>
+  username: <%= ENV.fetch("DBUSER") { "postgres" } %>
+  password: <%= ENV.fetch("DBPASS") { "password" } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: weather_api_development
+
+test:
+  <<: *default
+  database: weather_api_test
+
+production:
+  <<: *default
+  database: weather_api_production
+  username: weather_api
+  password: <%= ENV["WEATHER_API_DATABASE_PASSWORD"] %>

@@ -7,6 +7,8 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
+gem "faraday"
+gem "rack-cors", require: "rack/cors"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -29,10 +31,16 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "pry-rails"
+  gem "awesome_print"
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "rubocop", require: false
 end
 
+group :test do
+  gem "rspec-rails"
+end

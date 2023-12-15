@@ -1,0 +1,108 @@
+AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 2.7
+  DisabledByDefault: true
+  Exclude:
+    - db/schema.rb
+    - db/**/*
+    - vendor/**/*
+    - bin/**/*
+
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+
+# Indentation and Line Length (Example)
+Layout/IndentationWidth:
+  Width: 2
+Layout/LineLength:
+  Max: 120
+
+# Naming Conventions (Example)
+Naming/VariableName:
+  EnforcedStyle: snake_case
+Naming/MethodName:
+  EnforcedStyle: snake_case
+Naming/ConstantName:
+  Enabled: true
+
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Max: 120
+  Enabled: true
+
+Metrics/ModuleLength:
+  Description: 'Avoid modules longer than 100 lines of code.'
+  Max: 120
+  Enabled: true
+
+Metrics/ParameterLists:
+  Description: 'Pass no more than four parameters into a method.'
+  Max: 4
+  Enabled: true
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 5 lines of code.'
+  StyleGuide: '<https://github.com/bbatsov/ruby-style-guide#short-methods>'
+  Max: 20
+  Enabled: true
+
+# In a regular class definition, no empty lines around the body.
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+# In a regular module definition, no empty lines around the body.
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+
+Layout/SpaceAroundKeyword:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+# Don't use spaces in Hash literals like { foo: 'bar' }
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+
+# Detect hard tabs, no hard tabs.
+Layout/IndentationStyle:
+  Enabled: true
+
+# Blank lines should not have any spaces.
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+# No trailing whitespace.
+Layout/TrailingWhitespace:
+  Enabled: true
+
+# Use `foo {}` not `foo{}`.
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+# Use `foo { bar }` not `foo {bar}`.
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+
+# Align `end` with the matching keyword or starting expression except for
+# assignments, where it should be aligned with the LHS.
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: variable

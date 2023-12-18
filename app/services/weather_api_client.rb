@@ -14,7 +14,22 @@ class WeatherApiClient
   attr_reader :city, :api_path, :api_params
 
   def response_body
-    response.body
+    json_response['cod'] == 200 ? filtered_response : json_response
+  end
+
+  def json_response
+    JSON.parse(response.body)
+  end
+
+  def response_success?
+    json_response.cod == 200
+  end
+
+  def filtered_response
+    {}.tap do |response|
+      response[:data] = json_response['main']
+      response[:code] = json_response['cod']
+    end
   end
 
   def response

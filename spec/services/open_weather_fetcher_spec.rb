@@ -13,7 +13,7 @@ RSpec.describe OpenWeatherFetcher, type: :model do
       end
 
       it 'returns the weather data' do
-        expect(fetcher.call).to eq("{\"weather_data\":\"sunny\",\"code\":200}")
+        expect(fetcher.call).to eq({ "code" => 200, "weather_data" => "sunny" })
       end
     end
   end

@@ -10,6 +10,11 @@ gem "bootsnap", require: false
 gem "faraday"
 gem "rack-cors", require: "rack/cors"
 
+# OpenTelemetry gems
+gem 'opentelemetry-sdk', '~> 1.3'
+gem 'opentelemetry-exporter-otlp', '~> 0.26'
+gem 'opentelemetry-instrumentation-all', '~> 0.54'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

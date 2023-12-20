@@ -33,4 +33,5 @@
 /config/master.key
 
 /coverage/
+/docker-data/
 .DS_Store
